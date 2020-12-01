@@ -41,7 +41,7 @@ public class MessageRecordTest {
         );
 
         @Override
-        public Instant deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+        public Instant deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
             JsonNode node = jsonParser.getCodec().readTree(jsonParser);
             String text = node.textValue();
             Instant found = null;
